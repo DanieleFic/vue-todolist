@@ -46,9 +46,10 @@ let app = new Vue ({
             /*if(this.lista[index].data == this.corrente){
                 //console.log(this.lista[index].data)*/
                 if(this.lista[index].stato == true){
-                    console.log("pesce e pesce") 
+                    console.log("leva barrato") 
                    return this.lista[index].stato = false
             }else{
+                console.log("metti barrato")
                 return this.lista[index].stato = true
             }
         },
