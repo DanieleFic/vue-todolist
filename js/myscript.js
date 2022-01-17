@@ -58,10 +58,12 @@ let app = new Vue ({
         addNewTodo: function () {
           this.lista.push({
             testo: this.listaVuoto,
+            data:false,
           })
           this.newTodoText = ''
         }
       }
+      
     })
 
 

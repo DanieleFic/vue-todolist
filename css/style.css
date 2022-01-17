@@ -29,3 +29,13 @@ ul li {
 .box-input{
     margin-left: 45px;
 }
+
+.ms_li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.far{
+    font-size: 30px;
+}
