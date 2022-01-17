@@ -33,6 +33,7 @@ let app = new Vue ({
     el: "#app",
     data: {
         listaVuoto : "",
+        corrente: "",
         lista : [
             {
                 testo: "fare spesa",
@@ -67,6 +68,12 @@ let app = new Vue ({
             if(this.lista[index].data == true){
                 //console.log(this.lista[index].data)
              return 'linea'
+            }
+        },
+        check: function(index){
+            if(this.lista[index].data == this.corrente){
+                //console.log(this.lista[index].data)
+             return true
             }
         }
     },
