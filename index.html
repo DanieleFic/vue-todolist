@@ -25,9 +25,9 @@
               </form>
             
             <ul >
-                <li class="ms_li"  v-for="(item, index) in lista" :key="item.testo">
+                <li class="ms_li"  v-for="(item, index) in lista" :class="fatto(index)" v-on:click="fatto(index)"  :key="item.testo">
                     {{ item.testo }}  
-                    <button class="ms_button" @:remove="lista.splice(index, 1)"><i class="far fa-times-circle"></i></button>
+                    <button class="ms_button"  v-on:click="lista.splice(index, 1)"><i class="far fa-times-circle"></i></button>
                 </li>
                 
             </ul>

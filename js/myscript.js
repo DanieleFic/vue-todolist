@@ -36,24 +36,25 @@ let app = new Vue ({
         lista : [
             {
                 testo: "fare spesa",
+                data: true,
+            },
+            {
+                testo: "fare palestra",
                 data: false,
             },
             {
-                testo: "fare spesa2",
-                data: false,
-            },
-            {
-                testo: "fare spesa3",
+                testo: "Cucinare",
                 data: false,
             },{
-                testo: "fare spesa4",
+                testo: "Andare a scuola",
                 data: false,
             },{
-                testo: "fare spesa5",
+                testo: "Andare in banca",
                 data: false,
             },
         ]
     },
+
     methods: {
         addNewTodo: function () {
           this.lista.push({
@@ -61,9 +62,15 @@ let app = new Vue ({
             data:false,
           })
           this.newTodoText = ''
+        },
+        fatto: function(index){
+            if(this.lista[index].data == true){
+                //console.log(this.lista[index].data)
+             return 'linea'
+            }
         }
-      }
-      
+    },
+        
     })
 
 

@@ -39,3 +39,7 @@ ul li {
 .far{
     font-size: 30px;
 }
+
+.linea{
+    text-decoration: line-through;
+}
