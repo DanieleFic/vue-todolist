@@ -1,19 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: silver;
+}
 .container{
     position: relative;
 }
+
+.title{
+    background-color: #f44336;
+    height: 100px;
+    color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
 
 ul li {
     list-style-type: none;
     margin: 5px;
     padding: 5px;
-    background-color: lightskyblue;
-    border: 1px solid blue;
+    background: rgb(194, 177, 177);
+    border: 1px  solid black;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .container-lista{
     position: absolute;
     width: 1200px;
-    background-color: lightslategrey;
+    background-color: grey;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -38,8 +60,18 @@ ul li {
 }
 .far{
     font-size: 30px;
+    color: red;
 }
 
 .linea{
     text-decoration: line-through;
+    color: red;
 }
+
+ul li:nth-child(odd) {
+    background: #524b4b;
+  }
+
+  ul li:hover {
+    background: #ddd;
+  }
