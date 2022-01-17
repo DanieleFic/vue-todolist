@@ -11,9 +11,9 @@
 <body>
     
     <div id="app" class="container">
-        <div class="container-lista" v-on:submit.prevent="addNewTodo">
+        <div class="container-lista" >
             <h1 class="title">TO DO LIST VUE</h1>
-            <form  class="box-input">
+            <div  class="box-input">
                 <label for="new-todo"></label>
                 <input
                     @keyup.enter="addNewTodo"
@@ -21,8 +21,8 @@
                     id="new-todo"
                   placeholder="Aggiungi alla lista"
                 >
-                <button>Add</button>
-              </form>
+                <button @click="addNewTodo">Add</button>
+            </div>
             
             <ul >
                 <li class="ms_li"  v-for="(item, index) in lista" :class="fatto(index)" v-on:click="check(index)"  :key="item.testo">

@@ -1,39 +1,9 @@
-/*new Vue({
-    el: '#app',
-    data: {
-      newTodoText: '',
-      lista: [
-        {
-          id: 1,
-          testo: 'Do the dishes',
-        },
-        {
-          id: 2,
-          testo: 'Take out the trash',
-        },
-        {
-          id: 3,
-          testo: 'Mow the lawn'
-        }
-      ],
-      nextTodoId: 4
-    },
-    methods: {
-      addNewTodo: function () {
-        this.lista.push({
-          testo: this.newTodoText,
-        })
-        this.newTodoText = ''
-      }
-    }
-  })*/
-
 
 let app = new Vue ({
     el: "#app",
     data: {
         listaVuoto : "",
-        corrente: "",
+        corrente: 0,
         lista : [
             {
                 testo: "fare spesa",
@@ -57,12 +27,21 @@ let app = new Vue ({
     },
 
     methods: {
+        check: function(attivaindex){
+            /*if(this.lista[index].data == this.corrente){
+                //console.log(this.lista[index].data)*/
+                if(this.corrente = attivaindex){
+                    console.log("ciao")
+                return true
+            }
+        },
+
         addNewTodo: function () {
           this.lista.push({
             testo: this.listaVuoto,
             data:false,
           })
-          this.newTodoText = ''
+          this.listaVuoto = ''
         },
         fatto: function(index){
             if(this.lista[index].data == true){
@@ -70,26 +49,11 @@ let app = new Vue ({
              return 'linea'
             }
         },
-        check: function(index){
-            if(this.lista[index].data == this.corrente){
-                //console.log(this.lista[index].data)
-             return true
-            }
-        }
+        
     },
         
     })
 
 
-    /*methods: {
-        addNewTodo: function () {
-          this.lista.push({
-            testo: this.listaVuoto++,
-            //title: this.newTodoText
-          })
-          this.listaVuoto = ''
-        }
-      }*/
-    
 
     
