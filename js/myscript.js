@@ -7,44 +7,45 @@ let app = new Vue ({
         lista : [
             {
                 testo: "fare spesa",
-                data: true,
+                stato: true,
             },
             {
                 testo: "fare palestra",
-                data: false,
+                stato: false,
             },
             {
                 testo: "Cucinare",
-                data: false,
+                stato: false,
             },{
                 testo: "Andare a scuola",
-                data: false,
+                stato: false,
             },{
                 testo: "Andare in banca",
-                data: false,
+                stato: false,
             },
         ]
     },
 
     methods: {
-        check: function(attivaindex){
+        checkAttivo: function(attivaindex){
             /*if(this.lista[index].data == this.corrente){
                 //console.log(this.lista[index].data)*/
-                if(this.corrente = attivaindex){
+                if(this.corrente.done = attivaindex){
                     console.log("ciao")
-                return true
-            }
+                    return true
+            } return false
         },
 
         addNewTodo: function () {
           this.lista.push({
             testo: this.listaVuoto,
-            data:false,
+            stato:false,
           })
           this.listaVuoto = ''
         },
+
         fatto: function(index){
-            if(this.lista[index].data == true){
+            if(this.lista[index].stato == true){
                 //console.log(this.lista[index].data)
              return 'linea'
             }
