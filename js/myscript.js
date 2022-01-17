@@ -27,14 +27,6 @@ let app = new Vue ({
     },
 
     methods: {
-        checkAttivo: function(attivaindex){
-            /*if(this.lista[index].data == this.corrente){
-                //console.log(this.lista[index].data)*/
-                if(this.corrente.done = attivaindex){
-                    console.log("ciao")
-                    return true
-            } return false
-        },
 
         addNewTodo: function () {
           this.lista.push({
@@ -50,7 +42,16 @@ let app = new Vue ({
              return 'linea'
             }
         },
-        
+        checkAttivo: function(index){
+            /*if(this.lista[index].data == this.corrente){
+                //console.log(this.lista[index].data)*/
+                if(this.lista[index].stato == true){
+                    console.log("pesce e pesce") 
+                   return this.lista[index].stato = false
+            }else{
+                return this.lista[index].stato = true
+            }
+        },
     },
         
     })

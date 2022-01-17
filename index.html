@@ -25,7 +25,7 @@
             </div>
             
             <ul >
-                <li class="ms_li"  v-for="(item, index) in lista" :class="fatto(index)" v-on:click="checkAttivo(index)"  :key="item.testo">
+                <li class="ms_li"  v-on:click="checkAttivo(index)" v-for="(item, index) in lista" :class="fatto(index)"   :key="item.testo">
                     {{ item.testo }}  
                     <button class="ms_button"  v-on:click="lista.splice(index, 1)"><i class="far fa-times-circle"></i></button>
                 </li>
