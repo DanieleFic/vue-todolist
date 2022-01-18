@@ -29,17 +29,17 @@ let app = new Vue ({
     methods: {
 
         addNewTodo: function () {
-          this.lista.push({
+        this.lista.push({
             testo: this.listaVuoto,
             stato:false,
-          })
-          this.listaVuoto = ''
+        })
+        this.listaVuoto = ''
         },
 
         fatto: function(index){
             if(this.lista[index].stato == true){
                 //console.log(this.lista[index].data)
-             return 'linea'
+            return 'linea'
             }
         },
         checkAttivo: function(index){
@@ -47,7 +47,7 @@ let app = new Vue ({
                 //console.log(this.lista[index].data)*/
                 if(this.lista[index].stato == true){
                     console.log("leva barrato") 
-                   return this.lista[index].stato = false
+                return this.lista[index].stato = false
             }else{
                 console.log("metti barrato")
                 return this.lista[index].stato = true
